@@ -1,0 +1,15 @@
+--- a/arch/arm64/boot/dts/freescale/fsl-ls1028a.dtsi
++++ b/arch/arm64/boot/dts/freescale/fsl-ls1028a.dtsi
+@@ -194,6 +194,12 @@
+ 		#size-cells = <2>;
+ 		ranges;
+ 
++		serdes_1: phy@1ea0000 {
++			compatible = "fsl,lynx-28g";
++			reg = <0x0 0x1ea0000 0x0 0x1e30>;
++			#phy-cells = <1>;
++		};
++
+ 		ddr: memory-controller@1080000 {
+ 			compatible = "fsl,qoriq-memory-controller";
+ 			reg = <0x0 0x1080000 0x0 0x1000>;
